@@ -1,0 +1,136 @@
+
+            {% extends 'index.html' %}
+            {% load static %}
+            {% block content %}
+             <div style="position: fixed !important; z-index: 9999;" id="ytWidget"></div><script src="../translate.yandex.net/website-widget/v1/widget80d6.js?widgetId=ytWidget&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=false" type="text/javascript"></script>
+            <!-- #site-header-wrap -->
+           
+
+    <style>
+ .breadcrumbs .breadcrumb-trail>a:before {
+    top: 8px !important;
+}
+ </style>
+ <!-- title page -->
+            <div style="background-image: url(assets/templates/minimal/assets/images/image-slider/pictures8.jpg'); margin-top: 80px" class="flat-title-page parallax parallax-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="breadcrumbs">
+                            <h2 style="color: white !important" class="section-title-page">Contact Us</h2>
+                            <div class="breadcrumb-trail link-style-4">
+                                <a class="home" href="index.html">Home</a><span>Contact Us</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+ 
+    <!-- ========Contact-Section Starts Here ========-->
+    <section class="contact-section padding-bottom padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="contact-thumb">
+                        <img src="{% static 'major/assets/templates/minimal/images/contact/contact01.png'%}" alt="faq">
+                        <div class="mes1 wow slideInLeft">
+                            <img src="{% static 'major/assets/templates/minimal/images/contact/mes1.png'%}" alt="faq">
+                        </div>
+                        <div class="mes2 wow slideInDown">
+                            <img src="{% static 'major/assets/templates/minimal/images/contact/mes2.png'%}" alt="faq">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-header">
+                        <span>Contact With Us</span>
+                        <h4 class="title">You can contact us, We are always available for you.</h4>
+                    </div>
+                        <form method="post" action="" class="contact-form">
+                            {% csrf_token %}
+                        name:    <input type="hidden" name="_token" value="pxCjFC5EgBt0NaoljawNUK93nFZ9NfakP9T0yA0Y">                        <div class="form-group w-100">
+                            <input name="name" type="text" placeholder="Your Name" value="" required>
+                        </div>
+                        <div class="form-group w-100">
+                         email:   <input name="email" type="text" placeholder="Enter E-Mail Address"  value="" required>
+                        </div>
+                        <div class="form-group w-100">
+                         Subject:<input name="Subject" type="text" placeholder="Write your subject"  value="" required>
+                        </div>
+
+
+                        <div class="form-group w-100">
+                         message:   <textarea name="message" wrap="off" placeholder="Write your message" ></textarea>
+                        </div>
+                       
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========Contact-Section Ends Here ========-->
+
+    <!-- ========Contact-Section Stars Here ========-->
+    <div class="map-section padding-bottom">
+        <div class="container mw-lg-100 p-lg-0">
+            <div class="overview-area">
+                <div class="overview-left">
+                    <div class="address-area">
+                        <div class="addr-item">
+                            <div class="thumb">
+                                <img src="{% static 'major/assets/templates/minimal/images/contact/addr1.png' %}" alt="contact">
+                            </div>
+                            <div class="content">
+                                <h6 class="title">Office Address</h6>
+                                <ul>
+                                    <li>
+                                        Beursplein 37, 30 AA Rotterdam, Netherlands                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="addr-item">
+                            <div class="thumb">
+                                <img src="{% static 'major/assets/templates/minimal/images/contact/addr2.png'%}" alt="contact">
+                            </div>
+                            <div class="content">
+                                <h6 class="title">Email Address | phone </h6>
+                                <ul>
+                                    <li>
+                                        support@ZincoTradings.com  </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="addr-item">
+                            <div class="thumb">
+                                
+                            </div>
+                            <!--<div class="content">-->
+                            <!--    <h6 class="title">Contact Number</h6>-->
+                            <!--    <ul>-->
+                            <!--        <li>support@ZincoTradings.com-->
+                            <!--        </li>-->
+                            <!--    </ul>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471595.1094790834!2d174.47126442631682!3d-36.93988354820467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6fb%3A0x500ef6143a29917!2sAuckland%2C%20New%20Zealand!5e0!3m2!1sen!2sng!4v1632913796640!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========Contact-Section Ends Here ========-->
+
+
+
+    <style>
+      .widget-social ul li {
+          background-color: #181f33!important;
+      }
+  </style>
+  {% endblock %}
+   

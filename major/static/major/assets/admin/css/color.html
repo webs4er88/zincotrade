@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from TheFutureTrading.com/assets/admin/css/color.css by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 May 2022 08:14:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TheFutureTrading</title>
+  <link rel="shortcut icon" type="image/png" href="../../images/logoIcon/favicon.png"/>
+    
+  <link rel="stylesheet" href="dashboard.min.css">
+  <link rel="stylesheet" href="custom.css">
+
+ 
+  </head>
+<body>
+  <section class="error-section">
+    <div class="col-xl-5 col-lg-6 col-md-8 col-sm-8 content text-center">
+        <img src="../../images/error-404.png" alt="error-image">
+        <h2 class="font-large title">404</h2>
+        <span class="sub-title">Page not found</span>
+        <a href="../../../admin.html" class="btn btn-primary btn-lg mt-3">Got back to home</a>
+    </div>
+</section>
+
+  <script src="../js/dashboard.min.js"></script>
+  <script src="../js/main.js"></script>
+  
+  <!-- Load toast -->
+  <!-- iziToast -->
+    <link rel="stylesheet" href="iziToast.min.css">
+    <script src="../js/iziToast.min.js"></script>
+
+    
+        <script>
+
+        function notify(status,message) {
+            iziToast[status]({
+                message: message,
+                position: "topRight"
+            });
+        }
+    </script>
+
+
+  <script src="../js/nicEdit.js"></script>
+    
+    <script type="text/javascript">
+    bkLib.onDomLoaded(function() {
+        $( ".nicEdit" ).each(function( index ) {
+            $(this).attr("id","nicEditor"+index);
+            new nicEditor({fullPanel : true}).panelInstance('nicEditor'+index,{hasPanel : true});
+        });
+    });
+  </script>
+  
+  <script>$('[data-toggle=tooltip]').tooltip();</script>
+  </body>
+
+<!-- Mirrored from TheFutureTrading.com/assets/admin/css/color.css by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 May 2022 08:14:51 GMT -->
+</html>

@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Account Verification {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Account Verificiation</h4>
+      </div>
+      <div class="card-body">
+         <form method="post">
+          <div class="row">
+            <div class="col-md-3 pr-md-1">
+              <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" disabled="" value="{{ request.user.username|upper }}">
+              </div>
+            </div>
+            <div class="col-md-5 pr-md-1">
+               {% csrf_token %}
+              {{ form.as_p }}
+              </div>
+            </div>
+          
+        <button type="submit" class="btn btn-fill btn-primary">Done</button>
+        </form>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card card-user">
+      <div class="card-body">
+        <p class="card-text">
+          <div class="author">
+            <div class="block block-one"></div>
+            <div class="block block-two"></div>
+            <div class="block block-three"></div>
+            <div class="block block-four"></div>
+            <a href="javascript:void(0)">
+              
+              <h5 class="title">
+                {{ request.user.username|upper }}
+              </h5>
+            </a>
+            <p class="description">&nbsp;
+              {{ request.user.email }}
+            </p>
+          </div>
+        </p>
+        <div class="card-description">
+          ZincoTradings will be your genuinee finance associate. Our aspiration is your prosperity! Board on this adventure that leads towards your success. Invest with TrustTrade and achieve your desires with reliance.
+        </div>
+      </div>
+  
+    </div>
+  </div>
+ 
+</div>
+<script>
+  var name = "{{ user.id }}";
+  document.getElementById("elder").value = name;
+</script>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+  var name = "{{ user.id }}";
+  document.getElementById("elder").value = name;
+</script>
+{% endblock javascripts %}

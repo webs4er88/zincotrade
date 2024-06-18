@@ -1,0 +1,78 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Check Withdrawal {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> View Withdrawal</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table tablesorter " id="">
+            <thead class=" text-primary">
+              <tr>
+                <th>
+                  Name
+                </th>
+               
+                <th>
+                  Status
+                </th>
+                <th>
+                  Date
+                </th>
+                <th>
+                  Payment Gateway
+                </th>
+                <th class="text-center">
+                  Amount
+                </th>
+               
+              </tr>
+            </thead>
+
+            <tbody>
+              {% for Withdraw in object_list %}
+              {% if user.id == Withdraw.investor.id %}
+              <tr>
+                <td>
+                  {{ user.username|upper }}
+                </td>
+               
+                <td>
+                  {{ Withdraw.withdrawal_status }}
+                </td>
+                <td>
+                  {{ Withdraw.date }}
+                </td>
+                <td>
+                  {{ Withdraw.payment_gateway|upper }}
+                </td>
+                <td class="text-center">
+                  ${{ Withdraw.amount_in_USD }}
+                </td>
+                
+              </tr>
+              {% endif %}
+              {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -1,0 +1,84 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Check Investment {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> View Investments</h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table tablesorter " id="">
+            <thead class=" text-primary">
+              <tr>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Investment Plans
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Date
+                </th>
+                <th>
+                  Cryptocurrency
+                </th>
+                <th class="text-center">
+                  Amount
+                </th>
+                <th>
+                  View
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {% for Investment in object_list %}
+              {% if user.id == Investment.investor.id %}
+              <tr>
+                <td>
+                  {{ user.username|upper }}
+                </td>
+                <td>
+                  {{ Investment.investment_plan | upper }}
+                </td>
+                <td>
+                  {{ Investment.investment_status}}
+                </td>
+                <td>
+                  {{ Investment.date }}
+                </td>
+                <td>
+                  {{ Investment.cryptocurrency|upper }}
+                </td>
+                <td class="text-center">
+                  ${{ Investment.amount_in_USD }}
+                </td>
+                <td><a href="{% url 'investment-details' Investment.pk %}"><button class="btn btn-fill btn-primary">View Details</button></td>
+              </tr>
+              {% endif %}
+              {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

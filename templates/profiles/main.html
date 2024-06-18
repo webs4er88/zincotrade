@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+my recs
+{% endblock title %}
+
+{% block content %}
+    {% if request.user.is_authenticated %}
+    {% if my_recs  %}
+    <h1> my recommendations:</h1>
+    <ul>
+        {% for p in my_recs   %}
+        
+        <li>{{p.user}}</li>
+
+        {% endfor %}
+    </ul>
+    {% comment %} <a href="{% url 'Home_View' %}">
+        <button class="btn btn-primary">Go back Home</button>
+    </a> {% endcomment %}
+    {% else %}
+    <h1>you have no recommendations yet...</h1>
+    {% endif %}
+    {% comment %} {% if request.user.is_authenticated %}
+        {{request.user}}
+    {% else %}
+        <a href="{% url 'signup-view' %}">
+            <button class="btn btn-primary">Create an account</button>
+        </a>
+    {% endif %} {% endcomment %}
+    {% endif %}
+    
+{% endblock content %}

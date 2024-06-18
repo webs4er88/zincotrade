@@ -1,0 +1,103 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Profile {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="container-fluid">
+    <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('/static/assets/img/curved-images/curved0.jpg'); background-position-y: 50%;">
+      <span class="mask bg-gradient-primary opacity-6"></span>
+    </div>
+    <div class="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
+      <div class="row gx-4">
+        <div class="col-auto">
+          <div class="avatar avatar-xl position-relative">
+          
+          </div>
+        </div>
+        <div class="col-auto my-auto">
+          <div class="h-100">
+            <h5 class="mb-1">
+              {{ user.username|title }}
+            </h5>
+            <p class="mb-0 font-weight-bold text-sm">
+              User
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
+          <div class="nav-wrapper position-relative end-0">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid py-4">
+    <div class="row">
+      <div class="col-12 col-xl-4">
+        <div class="card h-100">
+          <div class="card-header pb-0 p-3">
+            <h6 class="mb-0">ZincoTradings</h6>
+          </div>
+          <div class="card-body p-3">
+            <p>Customers around the world discover and begin their journeys with crypto through ZincoTradings.
+
+              Approximately 30k+ verified users, 20k+ account managers, and 200+ ecosystem partners in over 100 countries trust ZincoTradings to easily and securely invest, earn, and use crypto.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-4">
+        <div class="card h-100">
+          <div class="card-header pb-0 p-3">
+            <div class="row">
+              <div class="col-md-8 d-flex align-items-center">
+                <h6 class="mb-0">Profile Information</h6>
+              </div>
+              <div class="col-md-4 text-end">
+                <a href="{% url 'edit_profile' %}">
+                  <i class="fas fa-user-edit text-secondary text-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Profile"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-3">
+            <p class="text-sm">
+              ZincoTradings will be your genuinee finance associate. Our aspiration is your prosperity! Board on this adventure that leads towards your success. Invest with ZincoTradings and achieve your desires with reliance.
+            </p>
+            <hr class="horizontal gray-light my-4">
+            <ul class="list-group">
+              <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Username</strong>:</strong> &nbsp; {{ user.username|title }}</li>
+              <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">First Name:</strong> &nbsp; {{ user.first_name|title }}</li>
+              <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Last Name:</strong> &nbsp; {{ user.last_name|title }}</li>
+              <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Email:</strong> &nbsp; {{ user.email|title }}</li>
+             
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xl-4">
+        <div class="card h-100">
+          <div class="card-header pb-0 p-3">
+            <h6 class="mb-0">Simplicity In Trading</h6>
+          </div>
+          <div class="card-body p-3">
+            <p>At ZincoTradings, our clients are our top priority, and form the core of our business policies. Therefore, we go out of our way to ensure that crypto trading is a rewarding experience, and more traders are able to take advantage of it. The state-of-the art ZincoTradings Inc Web Platform was created to ensure that everyone can trade easily. You don’t need to download software, or read complicated manuals. Connect to the internet, and begin trading right away. Easy as that!</p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+
+    {% include "includes/footer.html" %}
+
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

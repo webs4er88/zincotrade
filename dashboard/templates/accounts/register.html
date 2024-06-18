@@ -1,0 +1,105 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+             <div style="position: fixed !important; z-index: 9999;" id="ytWidget"></div><script src="../../translate.yandex.net/website-widget/v1/widget80d6.js?widgetId=ytWidget&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=false" type="text/javascript"></script>
+            <!-- #site-header-wrap -->
+           
+
+    <style>
+ .breadcrumbs .breadcrumb-trail>a:before {
+    top: 8px !important;
+}
+ </style>
+ <!-- title page -->
+            <div style="background-image: url(/assets/templates/minimal/assets/images/image-slider/pictures8.jpg'); margin-top: 80px" class="flat-title-page parallax parallax-3">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="breadcrumbs">
+                            <h2 style="color: white !important" class="section-title-page">Sign Up</h2>
+                            <div class="breadcrumb-trail link-style-4">
+                                <a class="home" href="{% url 'home' %}">Home</a><span>Sign Up</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+ 
+    <div class="account--section sign-in-section active relative" >
+        <div class="container-fluid">
+            <div class="account--area">
+                <div class="account--thumb">
+                    <img src="{% static 'major/assets/templates/minimal/images/account/sign-up.png'%}" alt="account">
+                </div>
+                <div class="account--content">
+                    <h1 class="title"style="color:#fff;">Sign Up your account</h1>
+                    <p class="mb-0">
+                      {% if msg %}
+                         <span style="color: green;"> {{ msg | safe }}  <a href="{% url 'login' %}" 
+                          class="text-info text-gradient font-weight-bold">Sign IN</a> </span>
+                      {% else %}
+                          Add your credentials
+                      {% endif %}                 
+                  </p>
+                    <form role="form text-left" method="post" action="">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label class="fixlabel" for="Username">
+                                <i class="fas fa-user-circle"></i>
+                            </label>
+                            {{ form.username }}
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="fixlabel" for="email1">
+                                <i class="fas fa-user-circle"></i>
+                            </label>
+                            {{ form.email }}
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fixlabel" for="pass1">
+                                <i class="fas fa-unlock"></i>
+                            </label>
+                            {{ form.password1 }}
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fixlabel" for="pass1">
+                                <i class="fas fa-unlock"></i>
+                            </label>
+                            {{ form.password2 }}
+                        </div>
+
+
+                        <div class="form-group">
+
+                        </div>
+
+
+                        
+
+
+                        <div class="form-group">
+                            <input type="submit" class="submit-form-btn" value="SIGN UP">
+                        </div>
+                        <div class="form-group">
+                            Already have an account yet?                            <a href="{% url 'login' %}" class=" d-block">Sign In</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========Header-Section Ends Here ========-->
+
+
+    <style>
+      .widget-social ul li {
+          background-color: #181f33!important;
+      }
+  </style>
+  {% endblock %}

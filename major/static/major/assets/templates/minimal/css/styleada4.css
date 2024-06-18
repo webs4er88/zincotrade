@@ -1,0 +1,162 @@
+
+
+input:focus {
+border: 1px solid #f01313;
+}
+
+input[type="submit"] {
+cursor: pointer;
+background-color: #f01313;
+}
+
+.bg-3, .deposit-tab .tab-menu .custom-button.active, .contact-form .form-group input[type="submit"], .ask-form .form-group input[type="submit"], .account-form .form-group input[type="submit"], .comment-form .form-group input[type="submit"] {
+background-image: -moz-linear-gradient(41deg, #f01313 30%, #f01313 67%, #f01313 88%);
+background-image: -webkit-linear-gradient(41deg, #f01313 30%, #f01313 67%, #f01313 88%);
+}
+
+.newslater-form .form-group button {
+background: #f01313;
+}
+
+.newslater-form .form-group input {
+background: #f013131a;
+color: #777777;
+height: 70px;
+padding-left: 25px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
+
+
+.newslater-form .form-group input:focus {
+border: 1px solid #f01313;
+}
+
+.account-form .form-group a {
+color: #f01313;
+}
+.footer-widget .social-icons li a i {
+color: #f01313;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+color: #f01313;
+}
+
+
+.faq-wrapper.style-two .faq-item.open .faq-title::after {
+background: #f01313;
+}
+
+
+.scrollToTop {
+background:  #f01313;
+}
+
+.scrollToTop:hover {
+background: #f01313;
+}
+
+.bg-1, bg-3,
+.custom-button .bg-1,
+.custom-button .bg-1 {
+background-image: -moz-linear-gradient(41deg, #f01313 30%, #f01313 75%, #f01313 100%);
+background-image: -webkit-linear-gradient(41deg, #f01313 30%, #f01313 75%, #f01313 100%);
+}
+
+.sponsors .owl-prev, .sponsors .owl-next {
+color: #f01313 ;
+}
+
+.owl-nav .owl-next,
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+color: #f01313 ;
+}
+
+header.active {
+	background: #000036;
+}
+
+.padding{
+padding: 80px 0px;
+}
+
+
+.feature-item .subtitle::before {
+background:#f01313 ;
+}
+
+.item-thumb i {
+font-size: 30px;
+color:#f01313 ;
+}
+
+
+.section-feature-item.active .feature-content .title, .section-feature-item:hover .feature-content .title {
+color: #f01313;
+}
+
+.section-feature-item .feature-thumb{
+    color: #f01313;
+}
+
+.logo-max{
+    max-width:220px;
+}
+.post-item.post-details .author-area .social li a {
+    background-color: #2ecc71;
+}
+
+.widget .title{
+
+}
+.widget .title {
+background: #2ecc71;
+}
+
+.user-area .tab-menu li.active {
+background:  #2ecc71;
+border-color:  #2ecc71;
+}
+
+.user-panel-header {
+background: #2ecc71;
+}
+
+
+.darkmode .investment-item {
+    background-color: #2ecc71;
+}
+
+.darkmode .post-item .post-content {
+    background: #000070;
+}
+
+.darkmode  .color-dark{
+color: #000 !important;
+}
+
+
+.darkmode .investment-item .investment-thumb,
+.darkmode .investment-item .investment-content p {
+    color: #fff !important;
+}
+.btn-custom2{
+    background-image:none;
+    background-color: #f01313;
+}
+.btn-custom2:focus, .btn-custom2:hover {
+    background-image:none;
+    background-color: #2ecc71;
+}
+.remove-user {
+    background-color: #2ecc71;
+}
+.card-header-bg{
+    background-color: #2ecc71;
+}
+.card-footer-bg{
+    background-color: transparent;
+}

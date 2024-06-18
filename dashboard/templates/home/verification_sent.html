@@ -1,0 +1,32 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Account Verification sent {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title">Account Verification Sent </h4>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+         <div class='container'>
+             <p>Your Account Verification detials have been sent succesfully. <br/>  Please wait while your details are being processed</p>
+         </div>
+         <a class="btn bg-gradient-dark mb-0" href="{% url 'user-home' %}"><i class="fas fa-plus"></i>&nbsp;&nbsp;Go back home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
